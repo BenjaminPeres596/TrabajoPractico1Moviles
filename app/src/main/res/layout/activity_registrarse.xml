@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Registrarse">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="20sp"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16sp">
+
+            <TextView
+                android:id="@+id/tvNombreDeUsuarioRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Usuario"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etNombreDeUsuarioRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:labelFor="@id/tvNombreDeUsuario"
+                android:minHeight="48sp"
+                android:paddingStart="10sp"
+                android:paddingBottom="7sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textEmailAddress"
+                android:labelFor="@id/tvEmail"
+                android:minHeight="48sp"
+                android:paddingStart="10sp"
+                android:paddingBottom="7sp" />
+
+
+            <TextView
+                android:id="@+id/tvContraseñaRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contraseña"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etContraseñaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPassword"
+                android:labelFor="@id/tvContraseñaRegistro"
+                android:minHeight="48sp"
+                android:paddingStart="10sp"
+                android:paddingBottom="7sp" />
+
+            <TextView
+                android:id="@+id/tvConfirmarContraseñaRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar contraseña"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etConfirmarContraseñaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPassword"
+                android:labelFor="@id/tvConfirmarContraseñaRegistro"
+                android:minHeight="48sp"
+                android:paddingStart="10sp"
+                android:paddingBottom="7sp" />
+
+            <TextView
+                android:id="@+id/tvErrorRegistrarse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="Error al registrarse, corrobore que los datos ingresados sean correctos."
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse" />
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRegistrarse"
+                    android:layout_width="150sp"
+                    android:layout_height="50sp"
+                    android:text="Registrarse"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
