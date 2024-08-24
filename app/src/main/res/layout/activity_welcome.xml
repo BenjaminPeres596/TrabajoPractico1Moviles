@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Welcome">
+
+    <TextView
+        android:id="@+id/tvBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10sp"
+        android:text="Bienvenido"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/cvBienvenido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="16sp"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenido">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20sp">
+
+            <TextView
+                android:id="@+id/tvPlataformaUtilizada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5sp"
+                android:text="Plataforma utilizada:"
+                android:textSize="18sp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioAndroid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Andriod" />
+
+                <RadioButton
+                    android:id="@+id/radioiOS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="iOS" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageAndroid"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="logo de android"
+                android:src="@drawable/android"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageiOS"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="logo de ios"
+                android:src="@drawable/ios"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvPreferencias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5sp"
+                android:text="Preferencias"
+                android:textSize="18sp"/>
+
+            <CheckBox
+                android:id="@+id/cbProgramacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programacion" />
+
+            <CheckBox
+                android:id="@+id/cbRedes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redes" />
+
+            <CheckBox
+                android:id="@+id/cbSeguridad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguridad" />
+
+            <CheckBox
+                android:id="@+id/cbHardware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hardware" />
+
+            <CheckBox
+                android:id="@+id/cbOtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otra" />
+
+            <EditText
+                android:id="@+id/etOtra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:labelFor="@id/cbOtra"
+                android:minHeight="48sp"
+                android:paddingStart="10sp"
+                android:paddingBottom="7sp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
