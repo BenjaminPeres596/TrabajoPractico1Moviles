@@ -46,14 +46,21 @@ class Welcome : AppCompatActivity() {
     private fun initListeners() {
         btnradioAndroid.setOnClickListener {
             imgAndroid.visibility = View.VISIBLE
+            imgiOS.visibility = View.GONE
         }
 
         btnradioiOS.setOnClickListener {
             imgiOS.visibility = View.VISIBLE
+            imgAndroid.visibility = View.GONE
         }
 
         cbOtra.setOnClickListener {
-            etOtra.visibility = View.VISIBLE
+            if (etOtra.visibility == View.VISIBLE) {
+                etOtra.visibility = View.GONE
+                etOtra.text.clear()
+            } else {
+                etOtra.visibility = View.VISIBLE
+            }
         }
     }
 }
