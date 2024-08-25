@@ -6,12 +6,14 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RadioButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Welcome : AppCompatActivity() {
+    private lateinit var tvBienvenido: TextView
     private lateinit var btnradioAndroid: RadioButton
     private lateinit var btnradioiOS: RadioButton
     private lateinit var imgAndroid: ImageView
@@ -24,6 +26,8 @@ class Welcome : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_welcome)
 
+        val user = intent.getStringExtra("user")
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -32,6 +36,8 @@ class Welcome : AppCompatActivity() {
 
         initComponents()
         initListeners()
+
+        tvBienvenido.text = "Bienvenido " + user
     }
 
     private fun initComponents() {
@@ -41,6 +47,7 @@ class Welcome : AppCompatActivity() {
         imgiOS = findViewById(R.id.imageiOS)
         cbOtra = findViewById(R.id.cbOtra)
         etOtra = findViewById(R.id.etOtra)
+        tvBienvenido = findViewById(R.id.tvBienvenido)
     }
 
     private fun initListeners() {

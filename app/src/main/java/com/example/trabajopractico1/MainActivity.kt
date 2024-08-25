@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             if (nombreDeUsuarioActual == NombreDeUsuarioCorrecto && contraseñaActual == ContraseñaCorrecta) {
                 tvErrorIniciarSesion.visibility = View.GONE
                 val intent = Intent(this, Welcome::class.java)
+                intent.putExtra("user", nombreDeUsuarioActual)
                 startActivity(intent)
             } else {
                 tvErrorIniciarSesion.visibility = View.VISIBLE
