@@ -37,7 +37,7 @@ class Welcome : AppCompatActivity() {
         initComponents()
         initListeners()
 
-        tvBienvenido.text = "Bienvenido " + user
+        tvBienvenido.text = "Bienvenido a la aplicación " + user
     }
 
     private fun initComponents() {
